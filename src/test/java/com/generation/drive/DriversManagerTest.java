@@ -33,6 +33,14 @@ public class DriversManagerTest {
     }
 
     @Test
+    public void driverAdded() {
+        Driver driver = new Driver("Emnmanuel", "ABC1234", 500);
+        driversManager.addDriver(driver);
+
+        assertEquals(driver, driversManager.getDriver(driver.getId()));
+    }
+
+    @Test
     public void startTripTest() {
 
     }
